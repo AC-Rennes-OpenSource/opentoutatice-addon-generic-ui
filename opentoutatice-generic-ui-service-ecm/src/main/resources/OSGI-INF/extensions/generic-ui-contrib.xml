@@ -66,6 +66,11 @@
                     <at>end</at>
                 </position>
             </layout>
+            <layout name="toutatice_explicitUrl">
+                <position>
+                    <at>end</at>
+                </position>
+            </layout>            
             <layout name="toutatice_space_enable_webId">
                 <position>
                     <at>end</at>
