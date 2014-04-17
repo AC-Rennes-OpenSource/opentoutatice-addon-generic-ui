@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<description>Addon to inject generic widgets in views</description>
 	<name>opentoutatice-generic-ui-parent-service</name>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<modules>
 	   <module>opentoutatice-generic-ui-service-ecm</module>
@@ -32,7 +32,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/tags/1.0.0</developerConnection>
+		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/trunk</developerConnection>
 	</scm>
 
 	<distributionManagement>
