@@ -12,7 +12,7 @@
 
 	<modules>
 	   <module>opentoutatice-generic-ui-service-ecm</module>
-	   <module>opentoutatice-generic-ui-service-marketplace</module>
+	   <!-- <module>opentoutatice-generic-ui-service-marketplace</module>  -->
 	</modules>
 
 	<build>
