@@ -6,7 +6,7 @@
 	<artifactId>opentoutatice-generic-ui-service-ecm</artifactId>
 	<packaging>jar</packaging>
 	<name>Addon to inject generic widgets in views</name>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1-RC1</version>
 
 	<properties>
 		<nuxeo.version>5.6.0-HF29</nuxeo.version>
@@ -77,7 +77,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/trunk/opentoutatice-generic-ui-service-ecm</developerConnection>
+		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/tags/1.0.1-RC1/opentoutatice-generic-ui-service-ecm</developerConnection>
 	</scm>
 
 	<distributionManagement>
