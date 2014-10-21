@@ -39,6 +39,7 @@
 				<excludedTypes>
 					<type>WebConfigurationFolder</type>
 					<type>WebConfiguration</type>
+					<type>TemplateRoot</type>
 				</excludedTypes>
 			</layout>
 			<layout name="keywords">
@@ -48,6 +49,7 @@
 				<excludedTypes>
 					<type>WebConfigurationFolder</type>
 					<type>WebConfiguration</type>
+					<type>TemplateRoot</type>
 				</excludedTypes>
 			</layout>
 			<layout name="toutatice_showInMenu">
@@ -59,12 +61,17 @@
 					<type>PortalPage</type>
 					<type>WebConfigurationFolder</type>
 					<type>WebConfiguration</type>
+					<type>TemplateRoot</type>
 				</excludedTypes>
 			</layout>          
             <layout name="toutatice_webId">
                 <position>
                     <at>end</at>
                 </position>
+                <excludedTypes>
+                	<type>Domain</type>
+					<type>TemplateRoot</type>
+				</excludedTypes> 
             </layout>
       
 		</layouts>
