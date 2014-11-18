@@ -9,7 +9,7 @@
 	<version>2.1.0-SNAPSHOT</version>
 
 	<properties>
-		<nuxeo.version>5.8.0-HF22</nuxeo.version>
+		<nuxeo.version>5.8.0-HF23</nuxeo.version>
 	</properties>
 
 	<dependencies>
@@ -44,8 +44,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<encoding>UTF-8</encoding>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
