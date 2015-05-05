@@ -17,15 +17,20 @@
 			doit être placé), le tag "after" (où on indique la layout après
 			lequel notre layout à ajouter doit être placé) et la tag "at" qui
 			indique la position
-			du layout à ajouter dans la liste des layouts présents; attention, la
+			du layout à ajouter dans la liste des layouts
+			présents; attention, la
 			numérotation commence
-			à 1 et "end" indique qu'on place notre layout à
+			à 1 et "end" indique
+			qu'on place notre layout à
 			la fin de la liste;
-			Par défaut, si les layouts indiqués dans les
-			balises "before" ou "after" ne sont pas trouvés,
+			Par défaut, si les
+			layouts indiqués dans les
+			balises "before" ou "after" ne sont pas
+			trouvés,
 			le layout est placé
 			en fin de liste.
-			En outre, il est possible d'exclure des types pour
+			En outre, il est possible
+			d'exclure des types pour
 			lesquels on ne veut pas que le layout soit
 			inséré: tag
 			"excludedTypes/type".
@@ -63,17 +68,32 @@
 					<type>WebConfiguration</type>
 					<type>TemplateRoot</type>
 				</excludedTypes>
-			</layout>          
-            <layout name="toutatice_webId">
-                <position>
-                    <at>end</at>
-                </position>
-                <excludedTypes>
-                	<type>Domain</type>
+			</layout>
+			<layout name="toutatice_webId">
+				<position>
+					<at>end</at>
+				</position>
+				<excludedTypes>
+					<type>Domain</type>
 					<type>TemplateRoot</type>
-				</excludedTypes> 
-            </layout>
-      
+				</excludedTypes>
+			</layout>
+
+		</layouts>
+
+		<layouts mode="create">
+			<layout name="toutatice_showInMenu">
+				<position>
+					<at>end</at>
+				</position>
+				<excludedTypes>
+					<type>PortalSite</type>
+					<type>PortalPage</type>
+					<type>WebConfigurationFolder</type>
+					<type>WebConfiguration</type>
+					<type>TemplateRoot</type>
+				</excludedTypes>
+			</layout>
 		</layouts>
 
 	</extension>
