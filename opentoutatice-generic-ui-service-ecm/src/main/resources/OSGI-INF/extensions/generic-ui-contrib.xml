@@ -92,9 +92,10 @@
 					<type>WebConfigurationFolder</type>
 					<type>WebConfiguration</type>
 					<type>TemplateRoot</type>
+					<type>AnnonceFolder</type>
 				</excludedTypes>
 			</layout>
-		</layouts>
+		</layouts> 
 
 	</extension>
 
