@@ -51,7 +51,7 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
     private List<GenericLayoutsDescriptor> allGenericLayoutsDescriptor = new ArrayList<GenericLayoutsDescriptor>();
 
     private enum Mode {
-        VIEW("view"), EDIT("edit"), CREATE("create"), ANY("any");
+        VIEW("view"), EDIT("edit"), CREATE("create");
 
         private String value;
 
@@ -177,12 +177,7 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
                     Map<String, Layouts> layoutsOfTypeMap = type.getLayouts();
                     finalLayoutsMap.putAll(layoutsOfTypeMap);
                     String mode = genericLayoutsDescriptor.getMode();
-                    Layouts layoutsByModeAndType = layoutsOfTypeMap.get(mode);
-                    
-                    //Case of 'any' mode
-                    if(layoutsByModeAndType == null){
-                        layoutsByModeAndType = layoutsOfTypeMap.get(Mode.ANY.value());
-                    }
+                    Layouts layoutsByModeAndType = layoutsOfTypeMap.get(mode)
                     
                     if (layoutsByModeAndType != null) {
                         String[] layoutsNames = layoutsByModeAndType.getLayouts();
