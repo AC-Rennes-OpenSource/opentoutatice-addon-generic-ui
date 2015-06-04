@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>opentoutatice-ecm.generic-ui-service</groupId>
+		<artifactId>opentoutatice-generic-ui-parent-service</artifactId>
+		<version>3.1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>opentoutatice-ecm.generic-ui-service</groupId>
+	<artifactId>opentoutatice-generic-ui-service-ecm</artifactId>
+	<packaging>jar</packaging>
+	<name>Addon to inject generic widgets in views</name>
+
+	<properties>
+		<nuxeo.version>6.0</nuxeo.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.nuxeo.ecm.core</groupId>
+			<artifactId>nuxeo-core-api</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-ui-web</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-webapp-core</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-forms-layout-client</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration>
+					<tagBase>http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/tags</tagBase>
+					<releaseProfiles>unpack,pack</releaseProfiles>
+					<preparationGoals>clean install</preparationGoals>
+					<goals>deploy</goals>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<archive>
+						<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+						<manifestEntries>
+							<Bundle-Version>${eclipseVersion}-t${buildNumber}</Bundle-Version>
+							<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<scm>
+		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/trunk/opentoutatice-generic-ui-service-ecm</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>toutatice-releases</id>
+			<url>http://projet.toutatice.fr/nexus/content/repositories/toutatice-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>toutatice-snapshots</id>
+			<url>http://projet.toutatice.fr/nexus/content/repositories/toutatice-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>deploy-toutatice-ecm-modules</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>copy-jar</id>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<copy file="${basedir}/target/${project.build.finalName}.jar" todir="${build.toutatice.ecm.modules.dir}/3.1.0" />
+									</tasks>
+								</configuration>
+								<phase>package</phase>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>
