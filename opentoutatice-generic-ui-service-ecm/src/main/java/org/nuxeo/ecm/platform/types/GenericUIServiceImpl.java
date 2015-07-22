@@ -177,7 +177,7 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
                     Map<String, Layouts> layoutsOfTypeMap = type.getLayouts();
                     finalLayoutsMap.putAll(layoutsOfTypeMap);
                     String mode = genericLayoutsDescriptor.getMode();
-                    Layouts layoutsByModeAndType = layoutsOfTypeMap.get(mode)
+                    Layouts layoutsByModeAndType = layoutsOfTypeMap.get(mode);
                     
                     if (layoutsByModeAndType != null) {
                         String[] layoutsNames = layoutsByModeAndType.getLayouts();
