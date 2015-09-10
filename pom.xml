@@ -8,10 +8,10 @@
 	<packaging>pom</packaging>
 	<description>Addon to inject generic widgets in views</description>
 	<name>opentoutatice-generic-ui-parent-service</name>
-	<version>3.0.1-SNAPSHOT</version>
+	<version>3.1.1-SNAPSHOT</version>
 
 	<properties>
-		<nuxeo.version>6.0</nuxeo.version>
+		<nuxeo.version>6.0-HF19</nuxeo.version>
 	</properties>
 	
 	<modules>

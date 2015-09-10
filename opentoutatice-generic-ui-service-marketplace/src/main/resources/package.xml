@@ -3,6 +3,9 @@
 	<title>Addon to inject generic widgets</title>
 	<description>
 		<p>Inject generic widgets in views create and/or modify and/or view.</p>
+
+		Main Fixes:
+		* Mode any of layouts taken into account
 	</description>
 	<home-page>http://www.toutatice.fr</home-page>
 	<vendor>Academie de Rennes - OSIVIA</vendor>
@@ -18,7 +21,7 @@
 	</platforms>
 	<dependencies>
 		<!-- Dependance sur la plate-forme opentoutatice -->
-		<package>open-toutatice:3.0.0</package>
+		<package>open-toutatice:3.1.3-RC01</package>
 	</dependencies>
 	<license>LGPL 2.1</license>
 	<license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>

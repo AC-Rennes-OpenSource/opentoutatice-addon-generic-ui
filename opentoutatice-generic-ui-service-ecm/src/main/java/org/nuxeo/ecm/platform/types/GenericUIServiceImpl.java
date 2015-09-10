@@ -24,8 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jxl.read.biff.MergedCellsRecord;
-
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -51,7 +49,7 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
     private List<GenericLayoutsDescriptor> allGenericLayoutsDescriptor = new ArrayList<GenericLayoutsDescriptor>();
 
     private enum Mode {
-        VIEW("view"), EDIT("edit"), CREATE("create");
+        VIEW("view"), EDIT("edit"), CREATE("create"), ANY("any");
 
         private String value;
 
@@ -178,6 +176,11 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
                     finalLayoutsMap.putAll(layoutsOfTypeMap);
                     String mode = genericLayoutsDescriptor.getMode();
                     Layouts layoutsByModeAndType = layoutsOfTypeMap.get(mode);
+                    
+                    //Case of 'any' mode
+                    if(layoutsByModeAndType == null){
+                        layoutsByModeAndType = layoutsOfTypeMap.get(Mode.ANY.value());
+                    }
                     
                     if (layoutsByModeAndType != null) {
                         String[] layoutsNames = layoutsByModeAndType.getLayouts();
