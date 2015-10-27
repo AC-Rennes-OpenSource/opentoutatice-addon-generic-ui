@@ -62,6 +62,8 @@
 					<at>end</at>
 				</position>
 				<excludedTypes>
+				    <type>AnnonceFolder</type>
+				    <type>Annonce</type>
 					<type>PortalSite</type>
 					<type>PortalPage</type>
 					<type>WebConfigurationFolder</type>
@@ -74,8 +76,9 @@
 					<at>end</at>
 				</position>
 				<excludedTypes>
-					<type>Domain</type>
 					<type>TemplateRoot</type>
+					<type>WebConfigurationFolder</type>
+                    <type>WebConfiguration</type>
 				</excludedTypes>
 			</layout>
 
@@ -87,6 +90,8 @@
 					<at>end</at>
 				</position>
 				<excludedTypes>
+				    <type>AnnonceFolder</type>
+                    <type>Annonce</type>
 					<type>PortalSite</type>
 					<type>PortalPage</type>
 					<type>WebConfigurationFolder</type>
