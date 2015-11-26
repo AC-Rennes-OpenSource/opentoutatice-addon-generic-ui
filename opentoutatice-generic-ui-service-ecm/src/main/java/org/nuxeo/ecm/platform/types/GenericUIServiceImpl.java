@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.nuxeo.runtime.api.Framework;
@@ -118,7 +119,7 @@ public class GenericUIServiceImpl extends DefaultComponent implements GenericUIS
         GenericLayoutsDescriptor mergedContrib = new GenericLayoutsDescriptor();
         if (contribsByMode != null) {
             Map<String, GenericLayoutDescriptor> mergedLayouts = new HashMap<String, GenericLayoutDescriptor>();
-            String mode = "";
+            String mode = StringUtils.EMPTY;
             for (GenericLayoutsDescriptor contrib : contribsByMode) {
                 mode = contrib.getMode();
                 GenericLayoutDescriptor[] layouts = contrib.getLayoutsToInsert();
