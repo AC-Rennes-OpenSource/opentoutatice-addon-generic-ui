@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -11,13 +12,47 @@
 	<version>4.6-SNAPSHOT</version>
 
 	<properties>
-		<nuxeo.version>6.0-HF34</nuxeo.version>
+		<nuxeo.version>6.0-HF37</nuxeo.version>
+		<nuxeo.cap.version>6.0</nuxeo.cap.version>
+		<nuxeo.opentoutatice.version>4.6-SNAPSHOT</nuxeo.opentoutatice.version>
 	</properties>
-	
+
 	<modules>
-	   <module>opentoutatice-generic-ui-service-ecm</module>
-	   <module>opentoutatice-generic-ui-service-marketplace</module>
+		<module>opentoutatice-generic-ui-service-ecm</module>
+		<module>opentoutatice-generic-ui-service-marketplace</module>
 	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			 <dependency>
+				<groupId>org.nuxeo.ecm.distribution</groupId>
+				<artifactId>nuxeo-distribution-cap</artifactId>
+				<version>${nuxeo.version}</version>
+				<type>pom</type>
+			</dependency>
+        
+			<dependency>
+				<groupId>org.nuxeo.ecm.core</groupId>
+				<artifactId>nuxeo-core-api</artifactId>
+				<version>${nuxeo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.nuxeo.ecm.platform</groupId>
+				<artifactId>nuxeo-platform-ui-web</artifactId>
+				<version>${nuxeo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.nuxeo.ecm.platform</groupId>
+				<artifactId>nuxeo-platform-webapp-core</artifactId>
+				<version>${nuxeo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.nuxeo.ecm.platform</groupId>
+				<artifactId>nuxeo-platform-forms-layout-client</artifactId>
+				<version>${nuxeo.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
@@ -25,12 +60,12 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.2.1</version>
-			 	<configuration>
+				<configuration>
 					<tagBase>http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-generic-ui-service/tags</tagBase>
 					<releaseProfiles>unpack,pack</releaseProfiles>
 					<preparationGoals>clean install</preparationGoals>
 					<goals>deploy</goals>
-			      	</configuration>
+				</configuration>
 			</plugin>
 		</plugins>
 		<pluginManagement>

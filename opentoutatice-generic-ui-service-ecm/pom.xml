@@ -13,32 +13,23 @@
 	<packaging>jar</packaging>
 	<name>Addon to inject generic widgets in views</name>
 
-	<properties>
-		<nuxeo.version>6.0-HF34</nuxeo.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.nuxeo.ecm.core</groupId>
 			<artifactId>nuxeo-core-api</artifactId>
-			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm.platform</groupId>
 			<artifactId>nuxeo-platform-ui-web</artifactId>
-			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm.platform</groupId>
 			<artifactId>nuxeo-platform-webapp-core</artifactId>
-			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm.platform</groupId>
 			<artifactId>nuxeo-platform-forms-layout-client</artifactId>
-			<version>${nuxeo.version}</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
