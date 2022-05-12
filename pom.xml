@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<description>Addon to inject generic widgets in views</description>
 	<name>opentoutatice-generic-ui-parent-service</name>
-	<version>RAB-4.7.18</version>
+	<version>RAB-4.7.19-RC01-SNAPSHOT</version>
 
 	<properties>
 		<nuxeo.version>RAB-6.1.5</nuxeo.version>
